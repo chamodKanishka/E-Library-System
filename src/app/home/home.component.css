@@ -12,9 +12,9 @@
   }
 
   .example-container {
-    width: 200px;
+    width: 500px;
     height: 100%;
-    border: 1px solid rgba(0, 0, 0, 0.5);
+    background-color: white;
   }
   
   .example-sidenav-content {
@@ -22,8 +22,16 @@
     height: 100%;
     align-items: center;
     justify-content: center;
+    
   }
   
   .example-sidenav {
     padding: 20px;
+    width: 200px;
+    background-color: white;
+    border: 5px solid rgba(2, 85, 863, 0.5);
+  }
+  .iconButton{
+      background-color: rgba(255, 255, 255, 0);
+      border: none;
   }
