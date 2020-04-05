@@ -13,6 +13,7 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatSelectModule} from '@angular/material/select';
 @NgModule({
   declarations: [
     AppComponent,
@@ -26,6 +27,7 @@ import {MatRadioModule} from '@angular/material/radio';
     MatTabsModule,
     MatRadioModule,
     MatInputModule,
+    MatSelectModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule.forRoot([

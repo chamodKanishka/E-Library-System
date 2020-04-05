@@ -87,4 +87,27 @@
     margin-top: 10px;
   }
   
+  mat-form-field {
+    width:100%;
+  }
+
+  .example-button-row button,
+  .example-button-row a {
+  margin-right: 8px;
+  }
   
+  .submit{
+    background-color: #3ab54b;
+    color: white;
+    width:4cm;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 60%;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 15px;
+
+
+  }
