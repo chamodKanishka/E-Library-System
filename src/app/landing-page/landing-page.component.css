@@ -1,9 +1,6 @@
 .Main {
     background-image: url('../../assets/images/NSBM.jpg');
     display: flex;
-   
-    
-    
     flex-direction: column;
     align-items: center;
     background-position: center;

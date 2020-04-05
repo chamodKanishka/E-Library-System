@@ -10,6 +10,7 @@ export class EnterPageComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    
   }
 
 }
