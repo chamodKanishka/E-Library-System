@@ -16,7 +16,15 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
-import { HomeComponent } from './home/home.component';
+import {MatCardModule} from '@angular/material/card'; 
+import {MatGridListModule} from '@angular/material/grid-list';
+import {MatListModule} from '@angular/material/list'; 
+import {MatBottomSheetModule} from '@angular/material/bottom-sheet';
+import {MatMenuModule} from '@angular/material/menu';
+import { HomeComponent, BottomSheetOverviewExampleSheet } from './home/home.component';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+import {MatTreeModule} from '@angular/material/tree';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,6 +32,7 @@ import { HomeComponent } from './home/home.component';
     LandingNavComponent,
     EnterPageComponent,
     HomeComponent,
+    BottomSheetOverviewExampleSheet
   ],
   imports: [
     BrowserModule,
@@ -34,6 +43,13 @@ import { HomeComponent } from './home/home.component';
     MatSelectModule,
     MatIconModule,
     MatSidenavModule,
+    MatCardModule,
+    MatGridListModule,
+    MatListModule,
+    MatBottomSheetModule,
+    MatNativeDateModule,
+    MatMenuModule,
+    MatTreeModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule.forRoot([
@@ -43,7 +59,10 @@ import { HomeComponent } from './home/home.component';
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
+  ],
+  bootstrap: [AppComponent],
+  entryComponents: [ BottomSheetOverviewExampleSheet],
 })
 export class AppModule { }
