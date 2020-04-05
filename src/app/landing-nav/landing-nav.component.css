@@ -1,16 +1,20 @@
 .spacer {
     flex: 1;
   }
-
+  .name{
+      margin-left: 110px;
+    align-items: center;
+    color: #0255a3;
+  }
   .toolbar {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
-    height: 100px;
+    height: 80px;
     display: flex;
     align-items: center;
-    background-color: rgba(25, 118, 210,1);
+    background-color: rgba(255, 255, 255,0.5);
     color: white;
     font-weight: 600;
   }
