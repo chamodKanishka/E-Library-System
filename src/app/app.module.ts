@@ -14,6 +14,8 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import {MatIconModule} from '@angular/material/icon';
+import {MatSidenavModule} from '@angular/material/sidenav';
 import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
@@ -30,6 +32,8 @@ import { HomeComponent } from './home/home.component';
     MatRadioModule,
     MatInputModule,
     MatSelectModule,
+    MatIconModule,
+    MatSidenavModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule.forRoot([
