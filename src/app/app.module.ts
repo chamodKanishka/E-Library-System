@@ -11,7 +11,8 @@ import { LandingNavComponent } from './landing-nav/landing-nav.component';
 import { EnterPageComponent } from './enter-page/enter-page.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
-
+import {MatInputModule} from '@angular/material/input';
+import {MatRadioModule} from '@angular/material/radio';
 @NgModule({
   declarations: [
     AppComponent,
@@ -23,6 +24,8 @@ import {MatTabsModule} from '@angular/material/tabs';
     BrowserModule,
     MatToolbarModule,
     MatTabsModule,
+    MatRadioModule,
+    MatInputModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule.forRoot([
