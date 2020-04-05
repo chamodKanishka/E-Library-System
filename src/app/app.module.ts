@@ -14,12 +14,14 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
 import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
+import { HomeComponent } from './home/home.component';
 @NgModule({
   declarations: [
     AppComponent,
     LandingPageComponent,
     LandingNavComponent,
     EnterPageComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
