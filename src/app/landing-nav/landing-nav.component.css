@@ -35,6 +35,6 @@
   .name{
     font-size: 42px;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
   }
