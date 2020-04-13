@@ -21,8 +21,10 @@
           <mat-label>Password</mat-label>
           <input matInput type="password" placeholder="Ex. ********">
         </mat-form-field>
+        <a routerLink="/home">
         <button mat-raised-button color="accent" class="submit">Login</button>
-        </form>
+        </a>
+      </form>
         
 
 
@@ -49,12 +51,11 @@
               <mat-option value="bussiness">School of Bussiness</mat-option>
             </mat-select>
           </mat-form-field>
+          <a routerLink="/home">
           <button mat-raised-button color="accent" class="submit">Submit Application</button>
-        
+          </a>
         </form>
          
       </mat-tab>
       </mat-tab-group>
     </div>
-  
-    <router-outlet></router-outlet>
