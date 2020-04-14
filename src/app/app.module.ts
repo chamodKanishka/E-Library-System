@@ -9,6 +9,7 @@ import { environment } from '../environments/environment';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { LandingNavComponent } from './landing-nav/landing-nav.component';
 import { EnterPageComponent } from './enter-page/enter-page.component';
+import { SearchComponent } from './search/search.component';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatInputModule} from '@angular/material/input';
@@ -25,6 +26,7 @@ import { HomeComponent, BottomSheetOverviewExampleSheet } from './home/home.comp
 import {MatNativeDateModule} from '@angular/material/core';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatTreeModule} from '@angular/material/tree';
+import { HomeNavComponent } from './home-nav/home-nav.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -32,7 +34,9 @@ import {MatTreeModule} from '@angular/material/tree';
     LandingNavComponent,
     EnterPageComponent,
     HomeComponent,
-    BottomSheetOverviewExampleSheet
+    BottomSheetOverviewExampleSheet,
+    HomeNavComponent,
+    SearchComponent
   ],
   imports: [
     BrowserModule,
@@ -56,6 +60,7 @@ import {MatTreeModule} from '@angular/material/tree';
       { path:'landing-page', component: LandingPageComponent},
       { path:'enter-page', component: EnterPageComponent},
       { path:'home', component: HomeComponent},
+      { path:'search', component: SearchComponent},
     ]),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule

@@ -1,24 +1,5 @@
-<mat-toolbar >  
-    <mat-toolbar-row class="toolbar">
-        <button class="iconButton"  mat-icon-button aria-label="Example icon-button with a menu">
-            <mat-icon>view_headline</mat-icon>
-          </button>
-      <span>Books</span>
-      <span class="example-spacer"></span>
-      <button mat-button [matMenuTriggerFor]="menu" class="category">Categories</button>
-      <mat-menu #menu="matMenu">
-      <button mat-menu-item>Computing</button>
-      <button mat-menu-item>Bussiness</button>
-      <button mat-menu-item>Electronic</button>
-      <button mat-menu-item>Media</button>
-
-      </mat-menu>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon">account_circle</mat-icon>
-      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon">delete</mat-icon>
-    </mat-toolbar-row>
-</mat-toolbar>
-
-
+<div class="main">
+<app-home-nav></app-home-nav>
 <div class="books">
 <mat-card class="example-card">
     <mat-card-header>
@@ -153,7 +134,8 @@
   </mat-card-actions>
 </mat-card>
 </div>
-
+</div>
+<router-outlet></router-outlet>
   
   
   

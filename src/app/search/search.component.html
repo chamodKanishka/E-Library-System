@@ -1,0 +1,43 @@
+<app-home-nav></app-home-nav>
+<mat-toolbar color="primary">
+    <mat-toolbar-row>
+      <span>Name</span>
+      <mat-form-field class="example-full-width">
+        <mat-label>Book Name</mat-label>
+        <input matInput>
+      </mat-form-field>
+      <button mat-raised-button>Search</button>
+     <button mat-raised-button color="primary">Reset</button>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Author</span>
+      <mat-form-field>
+        <mat-label>Author</mat-label>
+        <mat-select>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button>Search</button>
+     <button mat-raised-button color="primary">Reset</button>
+    </mat-toolbar-row>
+  
+    <mat-toolbar-row>
+      <span>Category</span>
+      <mat-form-field>
+        <mat-label>Category</mat-label>
+        <mat-select>
+          <mat-option>None</mat-option>
+          <mat-option *ngFor="let state of states" [value]="state">{{state}}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <button mat-raised-button>Search</button>
+     <button mat-raised-button color="primary">Reset</button>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  
+
+  <div class="books">
+  </div>
+<router-outlet></router-outlet>
