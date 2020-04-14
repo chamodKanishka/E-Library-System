@@ -17,6 +17,7 @@ import {MatRadioModule} from '@angular/material/radio';
 import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import {MatSidenavModule} from '@angular/material/sidenav';
+import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatCardModule} from '@angular/material/card'; 
 import {MatGridListModule} from '@angular/material/grid-list';
 import {MatListModule} from '@angular/material/list'; 
@@ -54,6 +55,7 @@ import { HomeNavComponent } from './home-nav/home-nav.component';
     MatNativeDateModule,
     MatMenuModule,
     MatTreeModule,
+    MatTooltipModule,
     BrowserAnimationsModule,
     AppRoutingModule,
     RouterModule.forRoot([
