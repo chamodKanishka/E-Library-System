@@ -1,0 +1,27 @@
+.mat-toolbar{
+    color: white;
+    background-color: #1976d2;
+}
+
+.example-fill-remaining-space {
+    flex: 1 1 auto;
+  }
+
+  #submit{
+      background-color:#1976d2;
+      color: white;
+      font-size: 18px;
+      padding:5px;
+  }
+
+.example-container{
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 10%;
+}
+
+.mat-form-field{
+    width: 400px;
+}

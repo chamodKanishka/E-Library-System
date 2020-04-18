@@ -3,7 +3,9 @@
         <button class="iconButton"  mat-icon-button aria-label="Example icon-button with a menu">
             <mat-icon>view_headline</mat-icon>
           </button>
-      <span>Books</span>
+          <button routerLink="/home" class="iconButton">
+      <span >Books</span>
+      </button>
       <span class="example-spacer"></span>
       <button mat-button [matMenuTriggerFor]="menu" class="category"  matTooltip="Reading Materials Categories"
       >Categories</button>
@@ -14,13 +16,11 @@
       <button mat-menu-item>Media</button>
 
       </mat-menu>
-      <button mat-button class="category">
+      <button routerLink="/admin/addbooks" mat-button class="category">
       <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon"  matTooltip="Logout">account_circle</mat-icon>
       </button>
-      <a routerLink="/search">
-      <button mat-button class="category">
+      <button  routerLink="/search" mat-button class="category">
       <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon"  matTooltip="Advanced Search Panel">search</mat-icon>
       </button>
-      </a>
     </mat-toolbar-row>
 </mat-toolbar>

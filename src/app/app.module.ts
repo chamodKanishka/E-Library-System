@@ -28,6 +28,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import {MatTreeModule} from '@angular/material/tree';
 import { HomeNavComponent } from './home-nav/home-nav.component';
+import { AddbooksComponent } from './admin/addbooks/addbooks.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -37,7 +38,8 @@ import { HomeNavComponent } from './home-nav/home-nav.component';
     HomeComponent,
     BottomSheetOverviewExampleSheet,
     HomeNavComponent,
-    SearchComponent
+    SearchComponent,
+    AddbooksComponent
   ],
   imports: [
     BrowserModule,
@@ -63,6 +65,7 @@ import { HomeNavComponent } from './home-nav/home-nav.component';
       { path:'enter-page', component: EnterPageComponent},
       { path:'home', component: HomeComponent},
       { path:'search', component: SearchComponent},
+      { path:'admin/addbooks', component: AddbooksComponent},
     ]),
     ServiceWorkerModule.register('ngsw-worker.js', { enabled: environment.production }),
     BrowserAnimationsModule
