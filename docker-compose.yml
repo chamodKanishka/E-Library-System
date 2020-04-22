@@ -1,0 +1,67 @@
+version: "3.8"
+
+services:
+  node-main:
+    container_name: ds-nsbm-node-main
+    build: ./DS-Coursework-NSBM-NodeJS/
+    environment:
+      - DB_CONNECT=mongodb://mongo/my_database
+    command: sh -c "npm install && npm start"
+    volumes:
+      - type: bind
+        source: ./DS-Coursework-NSBM-NodeJS/
+        target: /app
+    stdin_open: true
+    tty: true
+
+  node-backup:
+    container_name: ds-nsbm-node-backup
+    build: ./DS-Coursework-NSBM-NodeJS/
+    environment:
+      - DB_CONNECT=mongodb://mongo/my_database
+    command: sh -c "npm install && npm start"
+    volumes:
+      - type: bind
+        source: ./DS-Coursework-NSBM-NodeJS/
+        target: /app
+    stdin_open: true
+    tty: true
+
+  angular:
+    container_name: ds-nsbm-angular
+    build: ./E-Library-System/
+    command: sh -c "npm install && npx ng serve --host 0.0.0.0"
+    volumes:
+      - type: bind
+        source: ./E-Library-System/
+        target: /app
+    stdin_open: true
+    tty: true
+
+  nginx:
+    container_name: ds-nsbm-nginx
+    image: nginx
+    ports:
+      - "80:80"
+      - "8080:8080"
+      - "8000:8000"
+    volumes:
+      - type: bind
+        source: ./DS-Coursework-NSBM-NodeJS/docker/nginx.conf
+        target: /etc/nginx/conf.d/default.conf
+      - type: bind
+        source: ./DS-Coursework-NSBM-NodeJS/test/docker/nginx.socket.conf
+        target: /etc/nginx/conf.d/socket.conf
+      - type: bind
+        source: ./DS-Coursework-NSBM-NodeJS/test/socket
+        target: /test
+      - type: bind
+        source: ./E-Library-System/docker/nginx.conf
+        target: /etc/nginx/conf.d/angular.conf
+
+  mongo:
+    container_name: ds-nsbm-mongo
+    image: mongo
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: root

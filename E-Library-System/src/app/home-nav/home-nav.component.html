@@ -1,0 +1,26 @@
+<mat-toolbar >  
+    <mat-toolbar-row class="toolbar">
+        <button class="iconButton"  mat-icon-button aria-label="Example icon-button with a menu">
+            <mat-icon>view_headline</mat-icon>
+          </button>
+          <button routerLink="/home" class="iconButton">
+      <span >Books</span>
+      </button>
+      <span class="example-spacer"></span>
+      <button mat-button [matMenuTriggerFor]="menu" class="category"  matTooltip="Reading Materials Categories"
+      >Categories</button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item (click)="selectCategory('1')">IT</button>
+        <button mat-menu-item (click)="selectCategory('2')">Business</button>
+        <button mat-menu-item (click)="selectCategory('3')">Engineering</button>
+        <button mat-menu-item (click)="selectCategory('4')">Novels</button>
+        <button mat-menu-item (click)="selectCategory('*')">All</button>
+      </mat-menu>
+      <button (click)="logout()" mat-button class="category">
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example heart icon"  matTooltip="Logout">account_circle</mat-icon>
+      </button>
+      <button  routerLink="/search" mat-button class="category">
+      <mat-icon class="example-icon" aria-hidden="false" aria-label="Example delete icon"  matTooltip="Advanced Search Panel">search</mat-icon>
+      </button>
+    </mat-toolbar-row>
+</mat-toolbar>

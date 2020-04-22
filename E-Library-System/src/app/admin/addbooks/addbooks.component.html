@@ -1,0 +1,58 @@
+<mat-toolbar>Admin Panel
+    <span class="example-fill-remaining-space"></span>
+  <span>Add Books</span>
+    <span class="example-fill-remaining-space"></span>
+    <button (click)="logout()" mat-button class="category">
+  <span>Logout</span>
+</button>
+</mat-toolbar>
+<div class="example-container">
+    <mat-form-field appearance="fill">
+      <mat-label>Input Book Name</mat-label>
+      <input matInput name="bookName" [(ngModel)]="book.title">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+        <mat-label>Input Book Author</mat-label>
+        <input matInput name="author" [(ngModel)]="book.author">
+      </mat-form-field>
+      <br>
+      <mat-form-field appearance="fill">
+          <mat-label>Input Book ISBN</mat-label>
+          <input matInput name="isbn" [(ngModel)]="book.ISBN">
+        </mat-form-field>
+        <br>
+        <mat-form-field appearance="fill">
+          <mat-label>Input Email</mat-label>
+          <input matInput name="email" [(ngModel)]="book.added_by_emaill">
+        </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Input No of Copies</mat-label>
+      <input matInput name="isbn" [(ngModel)]="book.no_copies">
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Select Book Category</mat-label>
+      <mat-select name="category" [(ngModel)]="book.category">
+        <mat-option value="1">IT</mat-option>
+        <mat-option value="2">Business</mat-option>
+        <mat-option value="3">Engineering</mat-option>
+        <mat-option value="4">Novel</mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+      <mat-label>Brief Description(max 100)</mat-label>
+      <textarea name="desc" [(ngModel)]="book.description" matInput maxlength="100">
+      </textarea>
+    </mat-form-field>
+    <div class="form-group">
+      <input type="file" name="image"  />
+  </div>
+    <br>
+    <button id="submit" mat-flat-button color="primary" (click)="addBook()">Add Book</button>
+    <span>{{errMessageReg}}</span>
+  </div>
+  
+

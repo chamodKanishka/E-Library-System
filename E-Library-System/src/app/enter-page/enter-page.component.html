@@ -1,0 +1,64 @@
+<div class="toolbar" role="banner">
+    <img
+      width="300"
+      height="80"
+      src="../../assets/images/e-library.jpg"
+      alt="E-Library-Logo"
+    />
+    <h1 class="name">The Elecronic Library of NSBM</h1>
+      <div class="spacer"></div>
+  </div>
+  <div class="body">
+    <h2 class="divider">Get Into Library</h2>
+    <mat-tab-group class="enter">
+      <mat-tab label="Login" class="label">
+        <!-- <form class="example-form"> -->
+        <mat-form-field class="example-full-width">
+          <mat-label>NSBM Email</mat-label>
+          <input [(ngModel)]="user.email" name="email" type="email" matInput placeholder="Ex. nwvckchathuranga@student.nsbm.lk">
+        </mat-form-field>
+        <mat-form-field class="example-full-width">
+          <mat-label>Password</mat-label>
+          <input [(ngModel)]="user.password" name="password" matInput type="password" placeholder="Ex. ********">
+        </mat-form-field>
+        <input type="checkbox" id="check" title="admin" [(ngModel)]="isAdmin">Admin
+        <!-- <a routerLink="/home"> -->
+        <button mat-raised-button color="accent" class="submit" (click)="submitData()">Login</button>
+        <span *ngIf="incorrectPassword">Incorrect username or password!</span>
+        <!-- </a> -->
+      <!-- </form> -->
+        
+
+
+        
+       </mat-tab>
+      <mat-tab label="Register" class="label"> 
+        <!-- <form class="example-form"> -->
+          <mat-form-field class="example-full-width">
+            <mat-label>NSBM Email</mat-label>
+            <input type="email" name="email" [(ngModel)]="user.email" matInput placeholder="Ex. nwvckchathuranga@student.nsbm.lk">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>NSBM ID</mat-label>
+            <input matInput [(ngModel)]="user.nsbm_Id"  placeholder="Ex. 12345678">
+          </mat-form-field>
+          <mat-form-field class="example-full-width">
+            <mat-label>Full Name</mat-label>
+            <textarea name="fullname" [(ngModel)]="user.name" matInput placeholder="Ex. Name in full"></textarea>
+          </mat-form-field>
+          <mat-form-field>
+            <mat-select #fontSize  placeholder="Select your faculty" name="faculty" [(ngModel)]="user.faculty">
+              <mat-option value="1">School of Computing</mat-option>
+              <mat-option value="2">School of Engineering</mat-option>
+              <mat-option value="3">School of Bussiness</mat-option>
+            </mat-select>
+          </mat-form-field>
+          <!-- <a routerLink="/home"> -->
+          <button mat-raised-button color="accent" class="submit" (click)="registerData()">Submit Application</button>
+          <span>{{errMessageReg}}</span>
+          <!-- </a> -->
+        <!-- </form> -->
+         
+      </mat-tab>
+      </mat-tab-group>
+    </div>

@@ -1,0 +1,27 @@
+<mat-nav-list *ngIf="!viewBooks">
+    <a mat-list-item (click)="openMessage()">
+      <span mat-line>Saved This</span>
+      <!-- <span mat-line>{{abc}}</span> -->
+    </a>
+  
+    <a href="https://docs.google.com/" mat-list-item (click)="openLink($event)">
+      <span mat-line>Request For This</span>
+      <span mat-line>Embed in a document</span>
+    </a>
+  
+    <a href="https://plus.google.com/" mat-list-item (click)="openLink($event)">
+      <span mat-line>View Book Count</span>
+      <span mat-line>Share with your friends</span>
+    </a>
+  </mat-nav-list>
+
+  <div *ngIf=viewBooks>
+  <mat-nav-list *ngFor="let book of books">
+   <span mat-line>{{book.title}}</span>
+  </mat-nav-list>
+</div>
+  
+  
+  <!-- Copyright 2019 Google LLC. All Rights Reserved.
+      Use of this source code is governed by an MIT-style license that
+      can be found in the LICENSE file at http://angular.io/license -->
